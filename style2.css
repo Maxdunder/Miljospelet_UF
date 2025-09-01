@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Top rectangle box */
+.top-box {
+  width: 100%;                /* span across the page */
+  height: 70px;              /* height of the rectangle */
+  background-color: lightgray;  /* green background */
+  color: white;               /* text color */
+  display: flex;              /* center text inside */
+  align-items: left;
+  font-size: 20px;
+}
+.poo {
+padding-top: 0px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+  padding-left: 100px;
+align-items: left;
+}
+
+
+/* Content below */
+.content {
+  padding: 20px;
+}
