@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  background-image: url("bacj.jpg");
+  font-family: Arial, sans-serif;
+}
+
+/* Top rectangle box */
+.top-box {
+  width: 100%;                /* span across the page */
+  height: 180px;              /* height of the rectangle */
+  /*background-color: lightgray; */  
+  color: black;               /* text color */
+  display: flex;              /* center text inside */
+  align-items: left;
+  font-size: 20px;
+}
+.title {
+padding-top: 30px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+  padding-left: 290px;
+align-items: center;
+}
+.center {
+      padding-top: 200px;
+      padding-left: 510px;
+      justify-content: center; /* horizontally center */
+      align-items: center;     /* vertically center */
+      height: 100vh;  
+      color: white;         /* full viewport height */
+    }
+.cent {
+      display: flex;
+      justify-content: center; /* horizontally center */
+      align-items: center;     /* vertically center */
+             
+    }
+.poo {
+padding-top: 0px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+align-items: left;
+}
+.mybutton {
+      width: 260px;         
+      height: 80px; 
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 24px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.2s;
+    }
+
+
+/* Content below */
+.content {
+  padding: 20px;
+}
