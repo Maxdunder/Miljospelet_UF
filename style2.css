@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  background-image: url("bacj.jpg");
+  font-family: Arial, sans-serif;
+}
+.top-box {
+  width: 70%;                /* span across the page */
+  height: 180px;              /* height of the rectangle */
+  /*background-color: lightgray; */  
+  color: white;               /* text color */
+  display: flex;              /* center text inside */
+  align-items: left;
+  font-size: 20px;
+}
+.title {
+padding-top: 30px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+  padding-left: 290px;
+align-items: center;
+}
+.buybut {
+      padding-top: 60px;
+      padding-left: 510px;
+      justify-content: center; /* horizontally center */
+      align-items: center;     /* vertically center */  
+      color: white;         /* full viewport height */
+    }
+.bspel {
+padding-top: 0px;
+  padding-left: 400px;
+align-items: center;
+}
+.innl {
+ font-size: 20px;
+  padding-top: 50px;
+      padding-left: 300px;
+    justify-content: center; /* horizontally center */
+      align-items: center;     /* vertically center */
+      color: white;          
+    }
+.bng {
+padding-top: 50px;
+  padding-left: 400px;
+align-items: center;
+}
+.reg {
+font-size: 20px;
+  padding-top: 50px;
+      padding-left: 400px;
+    justify-content: center; /* horizontally center */
+      align-items: center;     /* vertically center */
+      color: white;          
+    }
+.logo {
+padding-top: 0px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+align-items: left;
+}
+
+.mybutton {
+      width: 260px;         
+      height: 80px; 
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 24px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.2s;
+    }
+.dropdown {
+  position: relative;
+padding-left: 350px;
+padding-top: 50px;
+}
+
+/* Style the dropdown button */
+.dropbtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .dropbtn:hover {
+      background-color: #45a049;
+    }
+
+    /* Dropdown menu (hidden by default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      border-radius: 6px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    /* Links inside dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Show class (activated by JS) */
+    .dropdown-content.show {
+      display: block;
+    }.content {
+  padding: 20px;
+}

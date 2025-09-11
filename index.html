@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miljöspelet UF</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <!-- Top Box -->
+  <div class="top-box">
+  <div class="logo">
+    <img id="randomImage" src="https://ia600905.us.archive.org/23/items/miljospeletuf2/milj%C3%B6speletuf2.png" width="180" height="180">
+</div>
+<div class="title">
+<h1>Miljöspelet UF<h1>
+</div>
+<div class="dropdown">
+    <button onclick="toggleDropdown()" class="dropbtn">Meny</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="omoss.html">Om Oss</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>
+  </div>
+<div class="bspel">
+<img id="bspel" src="bpåspel.png" width="480" height="270">
+</div>
+  <div class="buybut">
+    <button onclick="location.href='buynow.html'" class="mybutton">Köp spelet</button>
+ </div>
+<div class="innl">
+Miljöspelet är ett lärorikt och underhållande brädspel för hela familjen eller klassen.<br> Spelet kombinerar frågesport, utmaningar och strategi.<br>
+Målet är att samla flest poäng genom att svara på miljöfrågor, <br>utföra roliga uppdrag och undvika klimatfällor på vägen mot målrutan.<br><br>
+Samtidigt lär spelarna sig mer om de stora klimatutmaningar vi står inför idag: <br>plast i haven, växthuseffekt, energiförbrukning, <br>återvinning och mycket mer.
+Den som vinner blir spelets mästare i klimatkunskap!
+</div>
+<div class="bng">
+<img id="bspel" src="bpång.png" width="480" height="270">
+</div>
+<div class="reg">
+📦 Innehåll<br>
+•	1 spelplan (med rutor där man flyttar med tärning)<br>
+•	2 tärningar<br>
+•	6 spelpjäser<br>
+•	300–400 frågekort (vardera med 3 nivåer: Lätt, Medel, Svår)<br>
+•	100 uppmaningskort (små ”gör”-uppgifter eller scenarion)<br>
+•	Poängmarker eller block & penna<br>
+</div>
+<div class="bng">
+<img id="bspel" src="bpåinnh.png" width="480" height="270">
+</div>
+<div class="reg">
+🧩 Förberedelse<br>
+•	Alla spelare väljer en pjäs.<br>
+•	Lägg fråge- och uppmaningskort i separata högar.<br>
+•	Alla spelare börjar på START med 0 poäng.<br>
+
+🎲 Spelregler<br>
+•	Yngsta spelaren börjar.<br>
+•	Slå tärningarna och flytta fram motsvarande antal steg.<br>
+•	Du landar på en ruta:
+Frågeruta (❓): Dra ett frågekort och välj svårighetsgrad<br> (Lätt, Medel, Svår).<br>
+•	Lätt = +1 poäng vid rätt svar, -1 poäng och flytta tillbaka 3 steg vid fel.<br>
+•	Medel = +2 poäng vid rätt svar, -2 poäng och flytta tillbaka 4 steg vid fel.<br>
+•	Svår = +3 poäng vid rätt svar, -3 poäng och flytta tillbaka 5 steg vid fel.<br>
+Uppmaningsruta (!): Dra ett uppmaningskort. Utför uppgiften <br>(ex. ”Nämn tre sätt att minska plastanvändning”).<br>
+•	Om du lyckas: +2 poäng.<br>
+•	Om du vägrar/misslyckas: -1 poäng.<br>
+Bonusruta: Du hittade en ”grön lösning”! +1 poäng.<br>
+Klimatrisk: Du stötte på ett miljöproblem (t.ex. översvämning). <br>Tappa -2 poäng och stå över nästa runda.<br>
+Turen går vidare till nästa spelare.<br>
+🏆 Hur man vinner och förlorar<br>
+•	Spelet slutar när första spelaren når ”MÅL”-rutan.<br>
+•	Alla räknar sina poäng.<br>
+•	Den med flest poäng vinner.<br>
+•	Om en spelare hamnar på -10 poäng eller lägre, förlorar de direkt – de har ”gett upp klimatkampen”.<br>
+</div>
+<script>
+    function toggleDropdown() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Optional: close if clicked outside
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        let dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+          let openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>
