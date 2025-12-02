@@ -1,0 +1,212 @@
+body {
+  margin: 0;
+  background-image: url("bacj.jpg");
+  font-family: Arial, sans-serif;
+}
+.wholesite{
+  background: linear-gradient(
+    to bottom,
+    rgba(200, 200, 200, 0) 0%,    /* transparent grå upptill */
+    rgba(120, 120, 120, 0.7) 100% /* mörkare grå botten */
+  );
+  backdrop-filter: blur(4px);         /* blur amount */
+  -webkit-backdrop-filter: blur(4px); /* webkit blur, samma nivå */
+}
+  @media (orientation: portrait) {
+  .top-box {
+    flex-direction: row;      /* stay horizontal */
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+  }
+  .logo img {
+    width: 120px !important;          /* smaller logo in portrait */
+    height: 120px !important;
+  }
+   .title {
+    padding: 0 !important;
+    text-align: center;
+    flex: 1;
+    font-size: 12px !important;         /* smaller text for portrait */
+  }
+  .dropdown {
+    padding: 0 !important;
+  }
+}
+.top-box {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  flex-direction: row;        /* always horizontal */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  color: white;
+  box-sizing: border-box;
+}
+.title {
+  flex: 1;           /* expands so title stays centered */
+  text-align: center;
+  padding: 0;        /* remove old padding-left 290px */
+}
+.buybut {
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* center vertically */
+  width: 100%;               /* fill screen width */
+  height: 100px;             /* fill screen height */
+  padding-top: 40px;                /* remove all padding */
+  color: white;
+}
+.bspel {
+padding-top: 0px;
+  
+justify-content: center;
+align-items: center;
+}
+.innl {
+ font-size: 20px;
+  padding-top: 50px;
+  
+  text-align: center;
+    justify-content: center; /* horizontally center */
+      align-items: center;     /* vertically center */
+      color: white; 
+    }
+.bng {
+padding-top: 50px;
+ text-align: center;
+ justify-content: center;
+  align-items: center;
+}
+.bng img,
+.bspel img {
+  width: auto;        /* Keep natural width */
+  height: auto;       /* Never stretch */
+  max-width: 100%;    /* Allow shrinking, not stretching */
+  display: block;
+  margin: 0 auto;     /* Center image */
+}
+/* Portrait */
+@media (orientation: portrait) {
+  .bng img,
+  .bspel img {
+    max-width: 60%;    /* shrink only */
+    margin-top: 40px;
+  }
+.reg {
+      padding: 5% !important;
+  }
+}
+/* Landscape */
+@media (orientation: landscape) {
+  .bng img,
+  .bspel img {
+    max-width: 70%;
+    margin-top: 0;
+  }
+}
+/* Widescreen */
+@media (min-aspect-ratio: 16/9) {
+  .bng img,
+  .bspel img {
+    max-width: 50%;
+  }
+}
+.reg {
+  position: relative;
+  font-size: 20px;
+  padding-top: 50px;
+  padding-left: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.reg1 {
+  position: relative;
+  font-size: 20px;
+  padding-top: 50px;
+  padding-left: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.logo {
+  flex-shrink: 0;            /* never shrink */
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+}
+.mybutton {
+      width: 260px;         
+      height: 80px; 
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 24px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.2s;
+    }
+.dropdown {
+  flex-shrink: 0;            /* do not shrink */
+  display: flex;
+  align-items: center;
+  padding: 0;                /* remove old big padding */
+}
+/* Style the dropdown button */
+.dropbtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .dropbtn:hover {
+      background-color: #45a049;
+    }
+
+    /* Dropdown menu (hidden by default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      border-radius: 6px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    /* Links inside dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Show class (activated by JS) */
+    .dropdown-content.show {
+      display: block;
+    }.content {
+  padding: 20px;
+}
