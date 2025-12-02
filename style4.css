@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+        /* Optional settings for background */
+      background-repeat: no-repeat;  /* Prevent repeating */
+      background-size: cover;        /* Cover entire area */
+      background-position: center;   /* Center the image */
+      background-attachment: fixed;  /* Fix the image when scrolling */
+      margin: 0;
+      height: 100vh;
+  font-family: Arial, sans-serif;
+}
+.bott {
+  width: 100%;                /* span across the page */
+  height: 180px;              /* height of the rectangle */
+  background-color: #177699;  
+  color: white;               /* text color */
+  display: flex;              /* center text inside */
+  align-items: left;
+  font-size: 20px;
+}
+.contact{
+padding-left: 300px;
+padding-top: 100px;
+}
+  .button {
+      width: 200px;         
+      height: 50px; 
+      background-color: green;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 18px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.2s;
+   margin-bottom: 10px;
+    }
+
+/* Content below */
+.content {
+  padding: 20px;
+}
