@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+<link rel="stylesheet" href="style3.css">
+<TITLE>
+Miljöspelet UF
+</TITLE>
+</HEAD>
+<BODY> 
+<div class="form-row title-row">
+  <button onclick="location.href='index.html'" class="button">Gå tillbaka</button>
+  <h1>Beställ ditt spel</h1>
+</div>
+
+
+<div class="email">
+    <label for="messageInput">Skriv din epost address (Email): </label>
+    <input type="text" id="email" placeholder="Email" />
+  </div>
+  
+  <div class="num">
+    <label for="messageInput" align="left">(Förenklar kontakt vid leverans) Skriv ditt telefonnummer: </label>
+    <input type="text" id="nummer" placeholder="Telefonnummer" />
+  </div>
+<div class="antal">
+    <label for="messageInput" align="left">Antal spel: </label>
+    <input type="text" id="antal" placeholder="Antal" />
+  </div>
+<div class="add">
+    <label for="messageInput" align="left">Skriv address för leverans: </label>
+    <input type="text" id="address" placeholder="Address" />
+  </div>
+<div class="form-row">
+  <button class="mybutton" onclick="sendEmail()">Beställ</button>
+</div>
+  <script>
+    function sendEmail() {
+      const name = encodeURIComponent(document.getElementById('email').value);
+      const email = encodeURIComponent(document.getElementById('nummer').value);
+      const message = encodeURIComponent(document.getElementById('antal').value);
+      const phone = encodeURIComponent(document.getElementById('address').value);
+
+
+      const body = `Email: ${name}%0D%0ATelefonnummer: ${email}%0D%0AAntal spel: ${message}%0D%0AAddress: ${phone}`;
+
+      const mailtoLink = `mailto:miljospeletuf@gmail.com?subject=Spel beställning&body=${body}`;
+      window.location.href = mailtoLink;
+    }
+  </script>
+</BODY>
+</HTML>
