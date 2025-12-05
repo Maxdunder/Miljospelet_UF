@@ -1,0 +1,216 @@
+/* BODY */
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* center the form rows */
+}
+.pris{
+font-size:18px;
+color:white;
+}
+/* HEADER */
+h1 {
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 40px;           /* base size for portrait & landscape */
+}
+
+/* FORM ROWS */
+.form-row, .email, .num, .antal, .add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* center labels + inputs */
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;        /* base spacing */
+  width: 60%;
+  max-width: 600px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* CENTER FORM ROW TITLE */
+.form-row h1 {
+  text-align: center;
+  margin: 0;
+}
+
+/* LABELS AND INPUTS */
+label {
+  font-size: 24px;            /* readable */
+  color: white;
+  text-align: center;
+  white-space: nowrap;        /* prevents label from breaking into new line */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 20px;            /* readable input */
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  text-align: center;          /* center text inside input */
+}
+
+/* BUTTONS */
+/* "Gå tillbaka" button fixed to left of screen by default */
+/* "Gå tillbaka" button — scrolls with page */
+.button {
+  position: relative;     /* normal flow */
+  align-self: flex-start; /* align to left inside container */
+  margin-left: 10px;      /* optional spacing from left edge */
+  width: auto;
+  min-width: 180px;
+  height: 55px;
+  font-size: 20px;
+  background-color: green;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  z-index: auto;          /* reset z-index */
+}
+/* Beställ button centered */
+.mybutton {
+  width: 260px;
+  height: 50px;
+  font-size: 22px;
+  background-color: lightblue;
+  color: black;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin: 0 auto;              /* keep “Beställ” button centered */
+}
+
+/* PORTRAIT MODE */
+@media (orientation: portrait) {
+  h1 {
+    font-size: 26px;
+padding-left:30px;
+  }
+  label {
+    font-size: 20px;
+    white-space: normal !important;   /* allow text to wrap */
+    word-wrap: break-word !important; /* break long words if needed */
+  }
+  input[type="text"] {
+    font-size: 20px;
+    padding: 16px;
+  }
+  .mybutton {
+    width: 220px;
+    height: 70px;
+    font-size: 20px;
+  }
+  /* Make "Gå tillbaka" smaller in portrait */
+  .button {
+ position: relative;
+    top: 10px;
+    left: 0px;
+    min-width: 120px;
+    height: 45px;
+    font-size: 16px;
+  }
+  .form-row, .email, .num, .antal, .add {
+    width: 90%;               /* full width on small screens */
+  }
+}
+
+/* LANDSCAPE & WIDESCREEN 16:9 — centered, smaller boxes */
+@media (orientation: landscape), (min-aspect-ratio: 16/9) and (max-aspect-ratio: 21/9) {
+  .form-row, .email, .num, .antal, .add {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 60% !important;       /* smaller boxes */
+    max-width: 500px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  label {
+    font-size: 20px !important;
+    text-align: center !important;
+  }
+  input[type="text"] {
+    font-size: 20px !important;
+    padding: 12px !important;
+    text-align: center !important;
+  }
+  .form-row h1 {
+    font-size: 30px !important;
+    text-align: center !important;
+    margin-top: 20px !important;
+    width: 100% !important;
+  }
+  .button {
+    position: fixed !important;  /* stays left on landscape */
+    top: 30px !important;
+    left: 20px !important;
+    width: auto !important;
+    min-width: 180px !important;
+    height: 55px !important;
+    font-size: 20px !important;
+  }
+}
+
+/* ULTRAWIDE 21:9 */
+@media (min-aspect-ratio: 21/9) and (max-aspect-ratio: 32/9) {
+  h1 {
+    font-size: 64px;
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+  }
+  label {
+    font-size: 32px;
+  }
+  input[type="text"] {
+    font-size: 28px;
+    padding: 18px;
+  }
+  .form-row, .email, .num, .antal, .add {
+    margin-bottom: 70px;
+  }
+  .mybutton {
+    margin-top: 40px !important;
+    margin-bottom: 70px;
+  }
+}
+
+/* ULTRAWIDE 32:9 */
+@media (min-aspect-ratio: 32/9) {
+  h1 {
+    font-size: 80px;
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+  }
+  label {
+    font-size: 36px;
+  }
+  input[type="text"] {
+    font-size: 32px;
+    padding: 20px;
+  }
+  .form-row, .email, .num, .antal, .add {
+    margin-bottom: 90px;
+  }
+  .mybutton {
