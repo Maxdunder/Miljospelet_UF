@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<link rel="stylesheet" href="style3.css">
+<TITLE>
+Miljöspelet UF
+</TITLE>
+</HEAD>
+<BODY> 
+<div class="form-row title-row">
+  <button onclick="location.href='index.html'" class="button">Gå tillbaka</button>
+  <h1>Beställ ditt spel</h1>
+</div>
+
+
+<div class="email">
+    <label for="messageInput">Skriv din epost address (Email): </label>
+    <input type="text" id="email" placeholder="Email" />
+  </div>
+  
+  <div class="num">
+    <label for="messageInput" align="left">(Förenklar kontakt vid leverans) Skriv ditt telefonnummer: </label>
+    <input type="text" id="nummer" placeholder="Telefonnummer" />
+  </div>
+<div class="antal">
+    <label for="messageInput" align="left">Antal spel: </label>
+    <input type="text" id="antal" placeholder="Antal" />
+  </div>
+<div class="add">
+    <label for="messageInput" align="left">Skriv address för leverans: </label>
+    <input type="text" id="address" placeholder="Address" />
+  </div>
+<div class="form-row">
+<span class="pris">Pris: 270kr</span>
+  <button class="mybutton" onclick="sendEmail()">Beställ</button>
+</div>
+ <script>
+function sendEmail() {
+  const name = encodeURIComponent(document.getElementById('email').value);
+  const phone = encodeURIComponent(document.getElementById('nummer').value);
+  const antal = encodeURIComponent(document.getElementById('antal').value);
+  const address = encodeURIComponent(document.getElementById('address').value);
+
+  const subject = "Spel beställning";
+  const body =
+    `Email: ${name}%0D%0A` +
+    `Telefonnummer: ${phone}%0D%0A` +
+    `Antal spel: ${antal}%0D%0A` +
+    `Adress: ${address}`;
+
+  // 1. Try opening installed email app
+  const mailto = `mailto:miljospeletuf@gmail.com?subject=${subject}&body=${body}`;
+  window.location.href = mailto;
+
+  // 2. If it fails, try Gmail web (works on all devices)
+  setTimeout(() => {
+    window.location.href =
+      `https://mail.google.com/mail/?view=cm&fs=1&to=miljospeletuf@gmail.com&su=${subject}&body=${body}`;
+  }, 800);
+}
+</script>
+</BODY>
+</HTML>
